@@ -1,5 +1,5 @@
 //
-//  ListViewController.swift
+//  IconCell.swift
 //  reMind
 //
 //  Created by Benjamín Garrido Barreiro on 15/12/16.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ListViewController: UITableViewController {
-
-    @IBAction func addTask(_ sender: UIBarButtonItem) {
-    }
+class IconCell: UICollectionViewCell {
+    
+    @IBOutlet weak var icon : UIImageView!
+    @IBOutlet weak var lblTitle : UILabel!
     
 }

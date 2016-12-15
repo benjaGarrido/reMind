@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="ZEh-Ob-vqp">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIdentifier" rowHeight="80" id="ZEh-Ob-vqp" customClass="TaskCell" customModule="reMind" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZEh-Ob-vqp" id="Ibc-x2-O5d">
@@ -49,6 +49,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imgTask" destination="BjE-PH-76L" id="DtD-SB-czM"/>
+                                    <outlet property="lblTask" destination="fIF-d6-7Hb" id="fjz-q8-EmL"/>
                                     <segue destination="lii-LO-S8Y" kind="show" id="RMA-L2-MIb"/>
                                 </connections>
                             </tableViewCell>
@@ -61,6 +63,9 @@
                     <navigationItem key="navigationItem" title="reMIND" id="v2Q-Wz-pm2">
                         <barButtonItem key="rightBarButtonItem" image="icon-add" id="0Tj-XZ-ti8">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addTask:" destination="b2s-5Z-dIX" id="abL-dw-SdV"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -68,11 +73,11 @@
             </objects>
             <point key="canvasLocation" x="616.79999999999995" y="187.55622188905548"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Icons View Controller-->
         <scene sceneID="uYX-xB-1Li">
             <objects>
-                <collectionViewController id="lii-LO-S8Y" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="VuM-4v-70I">
+                <collectionViewController id="lii-LO-S8Y" customClass="IconsViewController" customModule="reMind" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="VuM-4v-70I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -83,7 +88,7 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="glb-7T-1AY">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellIdentifier" id="glb-7T-1AY" customClass="IconCell" customModule="reMind" customModuleProvider="target">
                                 <rect key="frame" x="10" y="90" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -112,9 +117,13 @@
                                     <constraint firstAttribute="trailing" secondItem="3ea-Nv-5dU" secondAttribute="trailing" constant="10" id="fGj-5b-TmP"/>
                                     <constraint firstItem="ZY3-jf-tYP" firstAttribute="top" secondItem="glb-7T-1AY" secondAttribute="top" constant="10" id="oUF-wl-thD"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="icon" destination="ZY3-jf-tYP" id="YOl-rJ-Lyx"/>
+                                    <outlet property="lblTitle" destination="3ea-Nv-5dU" id="Xwc-2z-6BN"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Irn-s3-edh">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderIdentifier" id="Irn-s3-edh" customClass="HeaderView" customModule="reMind" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -132,6 +141,9 @@
                                 <constraint firstItem="IL1-ks-X3j" firstAttribute="leading" secondItem="Irn-s3-edh" secondAttribute="leading" constant="36" id="fvs-zf-Yoh"/>
                                 <constraint firstAttribute="trailing" secondItem="IL1-ks-X3j" secondAttribute="trailing" constant="36" id="vng-1b-cN8"/>
                             </constraints>
+                            <connections>
+                                <outlet property="lblTaskName" destination="IL1-ks-X3j" id="3gi-Zm-DOJ"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="lii-LO-S8Y" id="UEr-tm-qkZ"/>
