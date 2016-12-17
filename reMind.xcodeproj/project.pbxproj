@@ -16,6 +16,7 @@
 		C145CB371E0336C8001B7916 /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C145CB361E0336C8001B7916 /* IconCell.swift */; };
 		C145CB391E0336DF001B7916 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C145CB381E0336DF001B7916 /* HeaderView.swift */; };
 		C145CB3B1E03381A001B7916 /* IconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C145CB3A1E03381A001B7916 /* IconsViewController.swift */; };
+		C1EE19A91E05CF42004C494D /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE19A81E05CF42004C494D /* TaskManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C145CB361E0336C8001B7916 /* IconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCell.swift; sourceTree = "<group>"; };
 		C145CB381E0336DF001B7916 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C145CB3A1E03381A001B7916 /* IconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsViewController.swift; sourceTree = "<group>"; };
+		C1EE19A81E05CF42004C494D /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				C145CB361E0336C8001B7916 /* IconCell.swift */,
 				C145CB381E0336DF001B7916 /* HeaderView.swift */,
 				C145CB3A1E03381A001B7916 /* IconsViewController.swift */,
+				C1EE19A81E05CF42004C494D /* TaskManager.swift */,
 			);
 			path = reMind;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				C145CB331E033199001B7916 /* ListViewController.swift in Sources */,
 				C145CB351E033695001B7916 /* TaskCell.swift in Sources */,
 				C145CB371E0336C8001B7916 /* IconCell.swift in Sources */,
+				C1EE19A91E05CF42004C494D /* TaskManager.swift in Sources */,
 				C145CB211E0092E6001B7916 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +320,7 @@
 				C145CB311E0092E7001B7916 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
