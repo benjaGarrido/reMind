@@ -51,7 +51,7 @@
                                 <connections>
                                     <outlet property="imgTask" destination="BjE-PH-76L" id="DtD-SB-czM"/>
                                     <outlet property="lblTask" destination="fIF-d6-7Hb" id="fjz-q8-EmL"/>
-                                    <segue destination="lii-LO-S8Y" kind="show" id="RMA-L2-MIb"/>
+                                    <segue destination="lii-LO-S8Y" kind="show" identifier="detailSegue" id="RMA-L2-MIb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -61,6 +61,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="reMIND" id="v2Q-Wz-pm2">
+                        <barButtonItem key="backBarButtonItem" title=" " id="1EJ-ZX-yRn"/>
                         <barButtonItem key="rightBarButtonItem" image="icon-add" id="0Tj-XZ-ti8">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -123,7 +124,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderIdentifier" id="Irn-s3-edh" customClass="HeaderView" customModule="reMind" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderView" id="Irn-s3-edh" customClass="HeaderView" customModule="reMind" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -155,14 +156,15 @@
             </objects>
             <point key="canvasLocation" x="1439" y="188"/>
         </scene>
-        <!--List ViewC-->
+        <!--Navigation Controller-->
         <scene sceneID="URw-Q4-pIh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RZg-pz-4I3" customClass="ListViewC" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RZg-pz-4I3" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xIV-OC-7Ag">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xIV-OC-7Ag">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.16078431372549018" green="0.50196078431372548" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
